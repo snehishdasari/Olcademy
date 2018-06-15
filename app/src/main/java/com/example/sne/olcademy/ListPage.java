@@ -23,11 +23,11 @@ public class ListPage extends AppCompatActivity {
 
         mCategoryList= new ArrayList<Category>() ;
 
-        mCategoryList.add(new Category(1,R.drawable.electronics,"Electronics")) ;
-        mCategoryList.add(new Category(2,R.drawable.tvappliances,"TV & Appliances")) ;
-        mCategoryList.add(new Category(3,R.drawable.fashion,"Fashion")) ;
-        mCategoryList.add(new Category(4,R.drawable.homefurniture,"Home & Furniture")) ;
-        mCategoryList.add(new Category(5,R.drawable.sports,"Sports")) ;
+        mCategoryList.add(new Category(0,R.drawable.electronics,"Electronics")) ;
+        mCategoryList.add(new Category(1,R.drawable.tvappliances,"TV & Appliances")) ;
+        mCategoryList.add(new Category(2,R.drawable.fashion,"Fashion")) ;
+        mCategoryList.add(new Category(3,R.drawable.homefurniture,"Home & Furniture")) ;
+        mCategoryList.add(new Category(4,R.drawable.sports,"Sports")) ;
 
 
         adapter= new com.example.sne.olcademy.CategoryListAdapter(getApplicationContext(),mCategoryList) ;

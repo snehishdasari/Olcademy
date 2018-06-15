@@ -78,8 +78,11 @@ public class CategoryListAdapter  extends BaseAdapter{
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v =    View.inflate(mContext, R.layout.list1,null) ;
-
+        View v=convertView  ;
+        if(v==null) {
+            v =LayoutInflater.from(mContext).inflate(R.layout.list1,parent,false) ;
+                    
+        }
         ImageView imageView;
         imageView = (ImageView)v.findViewById(R.id.icons);
 
@@ -89,6 +92,6 @@ public class CategoryListAdapter  extends BaseAdapter{
         textView.setText(mCategoryList.get(position).getName());
         v.setTag(mCategoryList.get(position).getId());
 
-        return null;
+        return v;
     }
 }
