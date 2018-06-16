@@ -1,17 +1,19 @@
 package com.example.sne.olcademy ;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
 import android.widget.TextView;
 
 import com.example.sne.olcademy.R;
 
 import java.util.List;
 
-public class CategoryListAdapter  extends BaseAdapter{
+public class Elecdemoadapter extends BaseAdapter{
     /**
      * How many items are in the data set represented by this Adapter.
      *
@@ -19,20 +21,16 @@ public class CategoryListAdapter  extends BaseAdapter{
      */
 
     private Context mContext ;
+    private List<com.example.sne.olcademy.Elecdemo> mList ;
 
-    public CategoryListAdapter(Context mContext, List<com.example.sne.olcademy.Category> mCategoryList) {
+    public Elecdemoadapter(Context mContext, List<com.example.sne.olcademy.Elecdemo> mList) {
         this.mContext = mContext;
-        this.mCategoryList = mCategoryList;
+        this.mList = mList;
     }
-
-    private List<com.example.sne.olcademy.Category> mCategoryList ;
-
-
-
 
     @Override
     public int getCount() {
-        return mCategoryList.size();
+        return mList.size();
     }
 
     /**
@@ -44,7 +42,7 @@ public class CategoryListAdapter  extends BaseAdapter{
      */
     @Override
     public Object getItem(int position) {
-        return mCategoryList.get(position);
+        return mList.get(position);
     }
 
     /**
@@ -78,20 +76,20 @@ public class CategoryListAdapter  extends BaseAdapter{
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v=convertView  ;
-        if(v==null) {
-            v =LayoutInflater.from(mContext).inflate(R.layout.list1,parent,false) ;
 
+        View v = convertView ;
+
+        if(v==null)
+        {
+            v=LayoutInflater.from(mContext).inflate(R.layout.electronicslist,parent,false);
         }
-        ImageView imageView;
-        imageView = (ImageView)v.findViewById(R.id.icons);
+        ImageView imageView=(ImageView)v.findViewById(R.id.lappy) ;
+        TextView textView=(TextView)v.findViewById(R.id.namelap) ;
+        TextView tv2=(TextView)v.findViewById(R.id.costlap) ;
 
-        TextView textView=(TextView)v.findViewById(R.id.names1) ;
-
-        imageView.setImageResource(mCategoryList.get(position).getImage());
-        textView.setText(mCategoryList.get(position).getName());
-        v.setTag(mCategoryList.get(position).getId());
-
+        imageView.setImageResource(mList.get(position).getImage());
+        textView.setText(mList.get(position).getName());
+        tv2.setText(mList.get(position).getCost());
         return v;
     }
 }

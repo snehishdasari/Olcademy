@@ -23,5 +23,10 @@
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="szx">799/- only</string>
+    <string name="a">John Players Mens Solid Casual Spread Shirt</string>
+    <string name="b">Available in Sizes:</string>
+    <string name="c">Proceed to Payment</string>
+    <string name="d">S          M              L            XL</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

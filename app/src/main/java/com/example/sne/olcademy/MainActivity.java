@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView imageView = (ImageView) findViewById(R.id.background) ;
-        imageView.setImageResource(R.drawable.online);
+        imageView.setImageResource(R.drawable.first) ;
 
         Thread t = new Thread()
         {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 try
                 {
-                    sleep(3000) ;
+                    sleep(2000) ;
                     startActivity(new Intent(getApplicationContext(),LoginActivity.class)) ;
                 }
                 catch (Exception e)

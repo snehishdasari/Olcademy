@@ -26,7 +26,12 @@
             android:name=".HomePage"
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ListPage"></activity>
+        <activity android:name=".ListPage" />
+        <activity android:name=".Home" />
+        <activity android:name=".Electronics" />
+        <activity android:name=".Description" />
+        <activity android:name=".Appliances" />
+        <activity android:name=".Shirt"></activity>
     </application>
 
 </manifest>

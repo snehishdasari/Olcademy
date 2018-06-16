@@ -29,6 +29,7 @@ public class HomePage extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
 
 
+        setTitle("Welcome") ;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
